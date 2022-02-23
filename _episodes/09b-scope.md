@@ -1,4 +1,4 @@
----
+﻿---
 title: "Variable Scope"
 teaching: 10
 exercises: 10
