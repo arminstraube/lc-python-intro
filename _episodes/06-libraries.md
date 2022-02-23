@@ -1,6 +1,6 @@
 ---
 title: "Libraries"
-teaching: 15
+teaching: 20
 exercises: 15
 questions:
 - "How can I extend the capabilities of Python?"
