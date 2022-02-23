@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
-teaching: 15
-exercises: 0
+teaching: 20
+exercises: 5
 questions:
 - "How do I use the Spyder IDE?"
 - "How can I run Python programs?"
