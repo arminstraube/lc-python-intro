@@ -10,7 +10,7 @@ It uses examples that are relevant to a wide range of use cases,
 and is designed to be used as a prerequisite lesson for other Python based lessons.
 
 This lesson references the Spyder IDE,
-but can be taught using a regular Python interpreter as well. Please note that this lesson uses Python 3.
+but can be followed with a regular Python interpreter as well. Please note that this lesson uses Python 3.
 
 > ## Credit
 >
