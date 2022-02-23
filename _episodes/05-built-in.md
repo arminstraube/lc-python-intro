@@ -1,7 +1,7 @@
 ---
 title: "Built-in Functions and Help"
 teaching: 20
-exercises: 15
+exercises: 20
 questions:
 - "How can I use built-in functions?"
 - "How can I find out what they do?"
