@@ -20,6 +20,8 @@ turn out to be anything but when we have to explain them precisely.
 
 *   The [Python 3 documentation](https://docs.python.org/3/) covers the core language
     and the standard library.
+    
+*   [PEP8](https://www.python.org/dev/peps/pep-0008/)is the style guide for writting Python code
 
 *   [PyCon](https://pycon.org/) is the largest annual conference for the Python community.
 
