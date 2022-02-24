@@ -243,7 +243,7 @@ ValueError: could not convert string to float: 'Hello world!'
 ~~~
 {: .error}
 
->> ## Conversions (or typecasts)
+> ## Conversions (or typecasts)
 >
 > What do you expect the following program to do?
 >
