@@ -84,55 +84,6 @@ print_date(1871, 3, 19)
     `()` contains the ingredients for the function
     while the body contains the recipe.
 
-## Functions may return a result to their caller using `return`.
-
-*   Use `return ...` to give a value back to the caller.
-*   May occur anywhere in the function.
-*   But functions are easier to understand if `return` occurs:
-    *   At the start to handle special cases.
-    *   At the very end, with a final result.
-
-~~~
-def average(values):
-    if len(values) == 0:
-        return None
-    return sum(values) / len(values)
-~~~
-{: .python}
-
-~~~
-a = average([1, 3, 4])
-print('average of actual values:', a)
-~~~
-{: .python}
-~~~
-2.6666666666666665
-~~~
-{: .output}
-
-~~~
-print('average of empty list:', average([]))
-~~~
-{: .python}
-~~~
-None
-~~~
-{: .output}
-
-*   Remember: [every function returns something]({{ page.root }}/04-built-in/).
-*   A function that doesn't explicitly `return` a value automatically returns `None`.
-
-~~~
-result = print_date(1871, 3, 19)
-print('result of call is:', result)
-~~~
-{: .python}
-~~~
-1871/3/19
-result of call is: None
-~~~
-{: .output}
-
 > ## Definition and Use
 >
 > What does the following program print?
@@ -150,6 +101,35 @@ result of call is: None
 > > pressure is 22.5
 > > ~~~
 > > {: .output}
+> {: .solution}
+{: .challenge}
+
+> ## Calling by Name
+>
+> What does this short program print?
+>
+> ~~~
+> def print_date(year, month, day):
+>     joined = str(year) + '/' + str(month) + '/' + str(day)
+>     print(joined)
+>
+> print_date(day=1, month=2, year=2003)
+> ~~~
+> {: .python}
+>
+> 1.  When have you seen a function call like this before?
+> 2.  When and why is it useful to call functions this way?
+> {: .python}
+> > ## Solution
+> > The program prints:
+> > ~~~
+> > 2003/2/1
+> > ~~~
+> > {: .output}
+> > It is useful to call a function with named arguments to ensure that the
+> > values of each argument are assigned to the intended argument in the
+> > function. This allows the order of arguments to be specified independently
+> > of how they are defined in the function itself.
 > {: .solution}
 {: .challenge}
 
@@ -228,35 +208,6 @@ result of call is: None
 > >             return v
 > > ~~~
 > > {: .python}
-> {: .solution}
-{: .challenge}
-
-> ## Calling by Name
->
-> What does this short program print?
->
-> ~~~
-> def print_date(year, month, day):
->     joined = str(year) + '/' + str(month) + '/' + str(day)
->     print(joined)
->
-> print_date(day=1, month=2, year=2003)
-> ~~~
-> {: .python}
->
-> 1.  When have you seen a function call like this before?
-> 2.  When and why is it useful to call functions this way?
-> {: .python}
-> > ## Solution
-> > The program prints:
-> > ~~~
-> > 2003/2/1
-> > ~~~
-> > {: .output}
-> > It is useful to call a function with named arguments to ensure that the
-> > values of each argument are assigned to the intended argument in the
-> > function. This allows the order of arguments to be specified independently
-> > of how they are defined in the function itself.
 > {: .solution}
 {: .challenge}
 
