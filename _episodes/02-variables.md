@@ -1,7 +1,7 @@
 ---
 title: "Variables and Assignment"
 teaching: 15
-exercises: 15
+exercises: 20
 questions:
 - "How can I store data in programs?"
 objectives:
@@ -10,7 +10,6 @@ objectives:
 keypoints:
 - "Use variables to store values."
 - "Use `print` to display values."
-- "Variables persist between cells."
 - "Variables must be created before they are used."
 - "Variables can be used in calculations."
 - "Use an index to get a single character from a string."
@@ -82,15 +81,6 @@ NameError: name 'eye_color' is not defined
 
 *   The last line of an error message is usually the most informative.
 *   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
-
-> ## Variables Persist Between Cells
-> Variables defined in one cell exist in all other cells once executed,
-> so the relative location of cells in the notebook do not matter
-> (i.e., cells lower down can still affect those above).
-> Remember: Notebook cells are just a way to organize a program:
-> as far as Python is concerned,
-> all of the source code is one long set of instructions.
-{: .callout}
 
 ## Variables can be used in calculations.
 
@@ -244,27 +234,6 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 >{: .solution}
 {: .challenge}
 
-> ## Can you slice integers?
->
-> If you assign `a = 123`,
-> what happens if you try to get the second digit of `a`?
->
-> > ## Solution
-> > Numbers are not stored in the written representation,
-> > so they can't be treated like strings.
-> >
-> > ~~~
-> > a = 123
-> > print(a[1])
-> > ~~~
-> > {: .python}
-> > ~~~
-> > TypeError: 'int' object is not subscriptable
-> > ~~~
-> > {: .error}
-> {: .solution}
-{: .challenge}
-
 > ## Choosing a Name
 >
 > Which is a better variable name, `m`, `min`, or `minutes`?
@@ -309,5 +278,26 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > 3.  It will slice the string, starting at the beginning on the string, and ending an element before the `high` index
 > > 4.  It will print the entire string
 > > 5.  It will slice the string, starting the `number` index, and ending a distance of the absolute value of `negative-number` elements from the end of the string
+> {: .solution}
+{: .challenge}
+
+> ## Can you slice integers?
+>
+> If you assign `a = 123`,
+> what happens if you try to get the second digit of `a`?
+>
+> > ## Solution
+> > Numbers are not stored in the written representation,
+> > so they can't be treated like strings.
+> >
+> > ~~~
+> > a = 123
+> > print(a[1])
+> > ~~~
+> > {: .python}
+> > ~~~
+> > TypeError: 'int' object is not subscriptable
+> > ~~~
+> > {: .error}
 > {: .solution}
 {: .challenge}
