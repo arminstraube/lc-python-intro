@@ -281,7 +281,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > {: .solution}
 {: .challenge}
 
-> ## Can you slice integers?
+> ## Can you slice a number?
 >
 > If you assign `a = 123`,
 > what happens if you try to get the second digit of `a`?
