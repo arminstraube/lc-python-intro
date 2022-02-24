@@ -1,35 +1,35 @@
 ---
 title: "Getting Started"
 teaching: 20
-exercises: 10
+exercises: 5
 questions:
-- "How do I use the Spyder IDE?"
+- "How do I use Spyder?"
 - "How can I run Python programs?"
 objectives:
-- "Learners can launch the Spyder IDE"
+- "Learners can launch Spyder"
 - "Learners are able to use the IPython console to interact with Python"
 - "Learners are able to write code in the Spyder editor and run this code"
 - "Learners are able to save their code in a *.py file"
-- "Learners can use the different buttons and panels needed in the Spyder IDE"
+- "Learners can use the different buttons and panels needed in Spyder"
 keypoints:
-- "Use the Spyder IDE for editing and running Python"
+- "Use Spyder for editing and running Python"
 - "The IPython console can be used to interact with Python directly"
 - "The editor can be used to write code, run and save it"
 ---
 
-## Use the Spyder IDE for editing and running Python.
+## Use Spyder for editing and running Python.
 
-*   The [Anaconda package manager][anaconda] is an automated way to install the [Spyder IDE][spyder].
+*   The [Anaconda package manager][anaconda] is an automated way to install the [Spyder IDE][spyder] (Integrated Development Environment).
     *   See [the setup instructions]({{ page.root }}/setup.html) for Anaconda installation instructions.
 *   It also installs all the extra libraries it needs to run.
-*   Once you have installed Python and the Spyder IDE requirements, open a shell and type:
+*   Once you have installed Python and the Spyder, you can run it via a click on the icon under Apps or open a shell and type:
     ~~~
     $ spyder
     ~~~
     {: .python}
 
-*   This will start The Spyder IDE.
-*   This environment has several useful tools we can use, which you can see in different panels in the Spyder IDE. We will look into some of them.
+*   This will start the Spyder IDE.
+*   This environment has several useful tools we can use, which you can see in different panels in Spyder. We will look into some of them.
 * You can change the positions and sizes of these panels to your preference, as you get to know them.
 
 ## Different ways of interacting with Python using Spyder
@@ -66,7 +66,7 @@ keypoints:
 > This is a temporary script file.
 > """
 >~~~
-> Write the following line below these lines and press run (the green 'play' button or f5). A window might pop up asking you to specify the run settings, leave the settings as they are and press 'Run'.
+> Write the following line below these lines and press run (use the button with both the cursor and the green 'play' button to run a single line or a selected bit of code). 
 > What happens?
 >
 > ~~~
