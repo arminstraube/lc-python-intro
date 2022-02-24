@@ -135,8 +135,8 @@ goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 
 ~~~
 element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
+print('first character:', element[0])
+print('fourth character:', element[3])
 ~~~
 {: .python}
 ~~~
