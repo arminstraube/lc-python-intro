@@ -234,10 +234,10 @@ NameError: name 'aege' is not defined
 >    If it runs, does its result make any sense?
 >
 > ~~~
-> rich = "gold"
-> poor = "tin"
-> print(max(rich, poor))
-> print(max(len(rich), len(poor)))
+> richer = "gold"
+> poorer = "tin"
+> print(max(richer, poorer))
+> print(max(len(richer), len(poorer)))
 > ~~~
 > {: .python}
 >
