@@ -47,13 +47,13 @@ length: 5
 *   Just like strings.
 
 ~~~
-print('zeroth item of temperatures:', temperatures[0])
-print('fourth item of temperatures:', temperatures[4])
+print('first item of temperatures:', temperatures[0])
+print('fifth item of temperatures:', temperatures[4])
 ~~~
 {: .python}
 ~~~
-zeroth item of temperatures: 17.3
-fourth item of temperatures: 17.6
+first item of temperatures: 17.3
+fifth item of temperatures: 17.6
 ~~~
 {: .output}
 
@@ -219,15 +219,6 @@ IndexError: string index out of range
 > {: .solution}
 {: .challenge}
 
-> ## How Large is a Slice?
->
-> If 'low' and 'high' are both non-negative integers,
-> how long is the list `values[low:high]`?
-> > ## Solution
-> > The list's length would be equal to `high - low`.  
-> {: .solution}
-{: .challenge}
-
 > ## From Strings to Lists and Back
 >
 > Given this:
@@ -305,6 +296,15 @@ IndexError: string index out of range
 > > {: .output}
 > > 1.  `stride` indicates both the number of steps, and from which end: positive starts from first element, negative from the last element. 
 > > 2.  `element[1::2]`
+> {: .solution}
+{: .challenge}
+
+> ## How Large is a Slice?
+>
+> If 'low' and 'high' are both non-negative integers,
+> how long is the list `values[low:high]`?
+> > ## Solution
+> > The list's length would be equal to `high - low`.  
 > {: .solution}
 {: .challenge}
 
