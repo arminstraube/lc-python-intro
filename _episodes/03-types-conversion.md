@@ -214,6 +214,7 @@ first is 2 and second is 5
 
 *   Where reasonable, `float()` will convert a string to a floating point number,
 and `int()` will convert a floating point number to an integer:
+
 ~~~
 print("string to float:", float("3.4"))
 print("float to int:", int(3.4))
