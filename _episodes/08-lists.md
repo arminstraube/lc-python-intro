@@ -140,8 +140,8 @@ print('fourth character:', element[3])
 ~~~
 {: .python}
 ~~~
-zeroth character: c
-third character: b
+first character: c
+fourth character: b
 ~~~
 {: .output}
 
