@@ -104,22 +104,6 @@ CLASSES
 ~~~
 {: .output}
 
-## Import specific items from a library module to shorten programs.
-
-*   Use `from ... import ...` to load only specific items from a library module.
-*   Then refer to them directly without library name as prefix.
-
-~~~
-from string import ascii_letters
-
-print('The ASCII letters are', ascii_letters)
-~~~
-{: .python}
-~~~
-The ASCII letters are abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
-~~~
-{: .output}
-
 ## Create an alias for a library module when importing it to shorten programs.
 
 *   Use `import ... as ...` to give a library a short *alias* while importing it.
@@ -141,6 +125,40 @@ Capitalise This Sentence Again Please.
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
+## Import specific items from a library module to shorten programs.
+
+*   Use `from ... import ...` to load only specific items from a library module.
+*   Then refer to them directly without library name as prefix.
+
+~~~
+from string import ascii_letters
+
+print('The ASCII letters are', ascii_letters)
+~~~
+{: .python}
+~~~
+The ASCII letters are abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+~~~
+{: .output}
+
+> ## When Is Help Available?
+>
+> When a colleague of yours types `help(os)`,
+> Python reports an error:
+>
+> ~~~
+> NameError: name 'os' is not defined
+> ~~~
+> {: .error}
+>
+> What has your colleague forgotten to do?
+>
+> > ## Solution
+> >
+> > Importing the os module (`import os`)
+> {: .solution}
+{: .challenge}
+
 > ## Exploring the os Library
 > The os library provides a way of accessing operating system functionality.
 >
@@ -150,6 +168,55 @@ Capitalise This Sentence Again Please.
 > > ## Solution
 > > 1. Using `help(os)` we see that we've got `os.getcwd()` which returns
 > >    a string representing the current working directory.
+> {: .solution}
+{: .challenge}
+
+> ## There Are Many Ways To Import Libraries!
+>
+> Match the following print statements with the appropriate library calls
+>
+> Library calls:
+> ~~~
+> A) from string import digits
+> B) import string
+> C) import string as s
+> ~~~
+> {: .python}
+>
+> Print commands:
+> ~~~
+> 1. print(list(s.digits))
+> 2. print(list(digits))
+> 3. print(string.ascii_uppercase)
+> ~~~
+> {: .python}
+> >
+> > ## Solution
+> > A2) Importing `digits` from `string` provides the `digits` methods
+> > B3) Importing `string` provides methods such as `ascii_uppercase`, but
+> >     requires the `string.` syntax.
+> > C1) Importing `string` with the alias `s` allows `s.digits`
+> {: .solution}
+{: .challenge}
+
+> ## Reading Error Messages
+>
+> 1. Read the code below and try to identify what the errors are without running it.
+> 2. Run the code, and read the error message. What type of error is it?
+>
+> ~~~
+> import datetime
+> datetime.date(2017,13,1)
+> ~~~
+> {: .python}
+>
+> > ## Solution
+> >
+> > 1. The date object takes arguments in the order year, month, day, so 13 is 
+> >    an invalid value for month.
+> > 2. You get an error of type "ValueError", indicating that the object
+> >    received an inappropriate argument value. The additional message
+> >    "month must be in 1..12" makes it clearer what the problem is.
 > {: .solution}
 {: .challenge}
 
@@ -195,24 +262,6 @@ Capitalise This Sentence Again Please.
 > {: .solution}
 {: .challenge}
 
-> ## When Is Help Available?
->
-> When a colleague of yours types `help(os)`,
-> Python reports an error:
->
-> ~~~
-> NameError: name 'os' is not defined
-> ~~~
-> {: .error}
->
-> What has your colleague forgotten to do?
->
-> > ## Solution
-> >
-> > Importing the os module (`import os`)
-> {: .solution}
-{: .challenge}
-
 > ## Importing With Aliases
 >
 > 1. Fill in the blanks so that the program below prints `0123456789`.
@@ -252,34 +301,6 @@ Capitalise This Sentence Again Please.
 > {: .solution}
 {: .challenge}
 
-> ## There Are Many Ways To Import Libraries!
->
-> Match the following print statements with the appropriate library calls
->
-> Library calls:
-> ~~~
-> A) from string import digits
-> B) import string
-> C) import string as s
-> ~~~
-> {: .python}
->
-> Print commands:
-> ~~~
-> 1. print(list(s.digits))
-> 2. print(list(digits))
-> 3. print(string.ascii_uppercase)
-> ~~~
-> {: .python}
-> >
-> > ## Solution
-> > A2) Importing `digits` from `string` provides the `digits` methods
-> > B3) Importing `string` provides methods such as `ascii_uppercase`, but
-> >     requires the `string.` syntax.
-> > C1) Importing `string` with the alias `s` allows `s.digits`
-> {: .solution}
-{: .challenge}
-
 > ## Importing Specific Items
 >
 > 1. Fill in the blanks so that the program below prints `90.0`.
@@ -310,26 +331,6 @@ Capitalise This Sentence Again Please.
 > {: .solution}
 {: .challenge}
 
-> ## Reading Error Messages
->
-> 1. Read the code below and try to identify what the errors are without running it.
-> 2. Run the code, and read the error message. What type of error is it?
->
-> ~~~
-> import datetime
-> datetime.date(2017,13,1)
-> ~~~
-> {: .python}
->
-> > ## Solution
-> >
-> > 1. The date object takes arguments in the order year, month, day, so 13 is 
-> >    an invalid value for month.
-> > 2. You get an error of type "ValueError", indicating that the object
-> >    received an inappropriate argument value. The additional message
-> >    "month must be in 1..12" makes it clearer what the problem is.
-> {: .solution}
-{: .challenge}
 
 [pypi]: https://pypi.org/
 [stdlib]: https://docs.python.org/3/library/
