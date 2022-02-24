@@ -84,6 +84,50 @@ print_date(1871, 3, 19)
     `()` contains the ingredients for the function
     while the body contains the recipe.
 
+## The scope of a variable is the part of a program that can 'see' that variable.
+
+*   There are only so many sensible names for variables.
+*   People using functions shouldn't have to worry about
+    what variable names the author of the function used.
+*   People writing functions shouldn't have to worry about
+    what variable names the function's caller uses.
+*   The part of a program in which a variable is visible is called its *scope*.
+
+~~~
+pressure = 103.9
+
+def adjust(t):
+    temperature = t * 1.43 / pressure
+    return temperature
+~~~
+{: .python}
+
+*   `pressure` is a *global variable*.
+    *   Defined outside any particular function.
+    *   Visible everywhere.
+*   `t` and `temperature` are *local variables* in `adjust`.
+    *   Defined in the function.
+    *   Not visible in the main program.
+    *   Remember: a function parameter is a variable
+        that is automatically assigned a value when the function is called.
+
+~~~
+print('adjusted:', adjust(0.9))
+print('temperature after call:', temperature)
+~~~
+{: .python}
+~~~
+adjusted: 0.01238691049085659
+~~~
+{: .output}
+~~~
+Traceback (most recent call last):
+  File "/Users/swcarpentry/foo.py", line 8, in <module>
+    print('temperature after call:', temperature)
+NameError: name 'temperature' is not defined
+~~~
+{: .error}
+
 > ## Definition and Use
 >
 > What does the following program print?
