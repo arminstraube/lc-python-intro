@@ -205,23 +205,6 @@ NameError: name 'aege' is not defined
 
 *   Fix syntax errors by reading the source and runtime errors by tracing execution.
 
-## Every function returns something.
-
-*   Every function call produces some result.
-*   If the function doesn't have a useful result to return,
-    it usually returns the special value `None`.
-
-~~~
-result = print('example')
-print('result of print is', result)
-~~~
-{: .python}
-~~~
-example
-result of print is None
-~~~
-{: .output}
-
 > ## What Happens When
 >
 > 1. Explain in simple terms the order of operations in the following program:
