@@ -191,7 +191,7 @@ final velocity: 30.0
     to show the final value of `velocity`,
     since its value is updated by the last iteration of the loop.
 
-## Compound Relations Using `and`, `or`, and Parentheses
+## Combine relations using `and`, `or`, and parentheses
 
 Often, you want some combination of things to be true.  You can combine
 relations within a conditional using `and` and `or`.  Continuing the example
@@ -207,10 +207,10 @@ for i in range(5):
         print("Fast heavy object.  Duck!")
     elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
         print("Normal traffic")
-    elif mass[i] <= 2 and velocity <= 20:
+    elif mass[i] <= 2 and velocity[i] <= 20:
         print("Slow light object.  Ignore it")
     else:
-        print("Whoa!  Something is up with the data.  Check it")
+        print("Whoa! Some other combination!")
 ~~~
 {: .python}
 
