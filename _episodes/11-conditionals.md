@@ -126,22 +126,6 @@ grade is C
 ~~~
 {: .output}
 
-*   Does *not* automatically go back and re-evaluate if values change.
-
-~~~
-velocity = 10.0
-if velocity > 20.0:
-    print('moving too fast')
-else:
-    print('adjusting velocity')
-    velocity = 50.0
-~~~
-{: .python}
-~~~
-adjusting velocity
-~~~
-{: .output}
-
 *   Often use conditionals in a loop to "evolve" the values of variables.
 
 ~~~
@@ -207,48 +191,48 @@ final velocity: 30.0
     to show the final value of `velocity`,
     since its value is updated by the last iteration of the loop.
 
-> ## Compound Relations Using `and`, `or`, and Parentheses
->
-> Often, you want some combination of things to be true.  You can combine
-> relations within a conditional using `and` and `or`.  Continuing the example
-> above, suppose you have
->
-> ~~~
-> mass     = [ 3.54,  2.07,  9.22,  1.86,  1.71]
-> velocity = [10.00, 20.00, 30.00, 25.00, 20.00]
->
-> i = 0
-> for i in range(5):
->     if mass[i] > 5 and velocity[i] > 20:
->         print("Fast heavy object.  Duck!")
->     elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
->         print("Normal traffic")
->     elif mass[i] <= 2 and velocity <= 20:
->         print("Slow light object.  Ignore it")
->     else:
->         print("Whoa!  Something is up with the data.  Check it")
-> ~~~
-> {: .python}
->
-> Just like with arithmetic, you can and should use parentheses whenever there
-> is possible ambiguity.  A good general rule is to *always* use parentheses
-> when mixing `and` and `or` in the same condition.  That is, instead of:
->
-> ~~~
-> if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
-> ~~~
-> {: .python}
->
-> write one of these:
->
-> ~~~
-> if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
-> if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
-> ~~~
-> {: .python}
->
-> so it is perfectly clear to a reader (and to Python) what you really mean.
-{: .callout}
+## Compound Relations Using `and`, `or`, and Parentheses
+
+Often, you want some combination of things to be true.  You can combine
+relations within a conditional using `and` and `or`.  Continuing the example
+above, suppose you have
+
+~~~
+mass     = [ 3.54,  2.07,  9.22,  1.86,  1.71]
+velocity = [10.00, 20.00, 30.00, 25.00, 20.00]
+
+i = 0
+for i in range(5):
+    if mass[i] > 5 and velocity[i] > 20:
+        print("Fast heavy object.  Duck!")
+    elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
+        print("Normal traffic")
+    elif mass[i] <= 2 and velocity <= 20:
+        print("Slow light object.  Ignore it")
+    else:
+        print("Whoa!  Something is up with the data.  Check it")
+~~~
+{: .python}
+
+Just like with arithmetic, you can and should use parentheses whenever there
+is possible ambiguity.  A good general rule is to *always* use parentheses
+when mixing `and` and `or` in the same condition.  That is, instead of:
+
+~~~
+if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
+~~~
+{: .python}
+
+write one of these:
+
+~~~
+if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
+if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
+~~~
+{: .python}
+
+so it is perfectly clear to a reader (and to Python) what you really mean.
+
 
 > ## Tracing Execution
 >
