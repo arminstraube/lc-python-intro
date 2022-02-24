@@ -84,6 +84,41 @@ print_date(1871, 3, 19)
     `()` contains the ingredients for the function
     while the body contains the recipe.
 
+## Functions may return a result to their caller using `return`.
+
+*   Use `return ...` to give a value back to the caller.
+*   May occur anywhere in the function.
+*   But functions are easier to understand if `return` occurs:
+    *   At the start to handle special cases.
+    *   At the very end, with a final result.
+
+~~~
+def average(values):
+    if len(values) == 0:
+        return None
+    return sum(values) / len(values)
+~~~
+{: .python}
+
+~~~
+a = average([1, 3, 4])
+print('average of actual values:', a)
+~~~
+{: .python}
+~~~
+2.6666666666666665
+~~~
+{: .output}
+
+~~~
+print('average of empty list:', average([]))
+~~~
+{: .python}
+~~~
+None
+~~~
+{: .output}
+
 ## The scope of a variable is the part of a program that can 'see' that variable.
 
 *   There are only so many sensible names for variables.
