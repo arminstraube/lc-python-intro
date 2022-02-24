@@ -14,7 +14,7 @@ but can be followed with a regular Python interpreter as well. Please note that 
 
 > ## Credit
 >
-> **This lesson is an abridged version of the Library Carpentry Lesson ["Python Intro for Libraries"](https://librarycarpentry.org/lc-python-intro/)
+> **This lesson is an adapted from the Library Carpentry Lesson ["Python Intro for Libraries"](https://librarycarpentry.org/lc-python-intro/)
 {: .callout}
 
 > ## Prerequisites
