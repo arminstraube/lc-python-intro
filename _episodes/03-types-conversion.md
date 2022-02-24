@@ -210,6 +210,78 @@ first is 2 and second is 5
     creates a new value, and assigns it to `second`.
 *   After that, `second` does not remember where it came from.
 
+## Strings to Numbers
+
+*   Where reasonable, `float()` will convert a string to a floating point number,
+> and `int()` will convert a floating point number to an integer:
+>
+> ~~~
+> print("string to float:", float("3.4"))
+> print("float to int:", int(3.4))
+> ~~~
+> {: .python}
+>
+> ~~~
+> string to float: 3.4
+> float to int: 3
+> ~~~
+> {: .output}
+>
+> If the conversion doesn't make sense, however, an error message will occur
+>
+> ~~~
+> print("string to float:", float("Hello world!"))
+> ~~~
+> {: .python}
+>
+> ~~~
+> ---------------------------------------------------------------------------
+> ValueError                                Traceback (most recent call last)
+> <ipython-input-5-df3b790bf0a2> in <module>()
+> ----> 1 print("string to float:", float("Hello world!"))
+>
+> ValueError: could not convert string to float: 'Hello world!'
+> ~~~
+> {: .error}
+>
+>> ## Conversions (or typecasts)
+>
+> What do you expect the following program to do?
+>
+> What does it actually do?
+>
+> Why do you think it does that?
+>
+> ~~~
+> print("fractional string to int:", int("3.4"))
+> ~~~
+> {: .python}
+>
+> > ## Solution
+> > What do you expect this program to do? It would not be so unreasonable to
+> > expect the Python `int` command to convert the string "3.4" to 3.4 and an
+> > additional type conversion to 3. After all, Python performs a lot of other
+> > magic - isn't that part of its charm?
+> >
+> > However, Python throws an error. Why? To be consistent, possibly. If you
+> > ask Python to perform two consecutive conversions, you must convert it
+> > explicitly in code.
+> >
+> > ~~~
+> > num_as_string = "3.4"
+> > num_as_float = float(num_as_string)
+> > num_as_int = int(num_as_float)
+> > print(num_as_int)
+> > ~~~
+> > {: .python}
+> > ~~~
+> > 3
+> > ~~~
+> > {: .output}
+> > We could also write it in a single line like this: `int(float("3.4"))`
+> {: .solution}
+{: .challenge}
+
 > ## Fractions
 >
 > What type of value is 3.4?
@@ -258,10 +330,10 @@ first is 2 and second is 5
 >
 > 1. Number of days since the start of the year.
 > 2. Time elapsed since the start of the year.
-> 3. Call number of a book.
+> 3. Title of a book.
 > 4. Standard book loan period.
 > 5. Number of reference queries in a year.
-> 6. Average library classes taught per semester.
+> 6. Average classes taught per semester.
 >
 > > ## Solution
 > > 1. Integer  
@@ -273,7 +345,39 @@ first is 2 and second is 5
 > {: .solution}
 {: .challenge}
 
-> ## Division Types
+> ## Arithmetic with Different Types
+>
+> Which of the following will print 2.0?
+> Note: there may be more than one right answer.
+>
+> ~~~
+> first = 1.0
+> second = "1"
+> third = "1.1"
+> ~~~
+> {: .python}
+>
+> 1. `first + float(second)`
+> 2. `float(second) + float(third)`
+> 3. `first + int(third)`
+> 4. `first + int(float(third))`
+> 5. `int(first) + int(float(third))`
+> 6. `2.0 * second`
+>
+> > ## Solution
+> >
+> > Answer: 1 and 4.
+> >
+> > 1. is correct
+> > 2. gives 2.1
+> > 3. gives an error because we cannot convert text to int directly
+> > 4. is correct
+> > 5. gives 2 (as an integer not as a float)
+> > 6. gives an error because `second` is a string.
+> {: .solution}
+{: .challenge}
+
+   > ## Division Types
 > There are three different types of division:
 > 1. 'Normal' division (aka floating-point division) is what most people may be
 > familiar with: 5 / 2 = 2.5
@@ -324,109 +428,5 @@ first is 2 and second is 5
 > > 14  full classes, plus an extra class with only  12 students
 > > ~~~
 > > {: .output}
-> {: .solution}
-{: .challenge}
-
-> ## Strings to Numbers
->
-> Where reasonable, `float()` will convert a string to a floating point number,
-> and `int()` will convert a floating point number to an integer:
->
-> ~~~
-> print("string to float:", float("3.4"))
-> print("float to int:", int(3.4))
-> ~~~
-> {: .python}
->
-> ~~~
-> string to float: 3.4
-> float to int: 3
-> ~~~
-> {: .output}
->
-> **Note:** conversion is some times also called typecast.
->
-> If the conversion doesn't make sense, however, an error message will occur
->
-> ~~~
-> print("string to float:", float("Hello world!"))
-> ~~~
-> {: .python}
->
-> ~~~
-> ---------------------------------------------------------------------------
-> ValueError                                Traceback (most recent call last)
-> <ipython-input-5-df3b790bf0a2> in <module>()
-> ----> 1 print("string to float:", float("Hello world!"))
->
-> ValueError: could not convert string to float: 'Hello world!'
-> ~~~
-> {: .error}
->
-> Given this information, what do you expect the following program to do?
->
-> What does it actually do?
->
-> Why do you think it does that?
->
-> ~~~
-> print("fractional string to int:", int("3.4"))
-> ~~~
-> {: .python}
->
-> > ## Solution
-> > What do you expect this program to do? It would not be so unreasonable to
-> > expect the Python `int` command to convert the string "3.4" to 3.4 and an
-> > additional type conversion to 3. After all, Python performs a lot of other
-> > magic - isn't that part of its charm?
-> >
-> > However, Python throws an error. Why? To be consistent, possibly. If you
-> > ask Python to perform two consecutive typecasts, you must convert it
-> > explicitly in code.
-> >
-> > ~~~
-> > num_as_string = "3.4"
-> > num_as_float = float(num_as_string)
-> > num_as_int = int(num_as_float)
-> > print(num_as_int)
-> > ~~~
-> > {: .python}
-> > ~~~
-> > 3
-> > ~~~
-> > {: .output}
-> > We could also write it in a single line like this: `int(float("3.4"))`
-> {: .solution}
-{: .challenge}
-
-> ## Arithmetic with Different Types
->
-> Which of the following will print 2.0?
-> Note: there may be more than one right answer.
->
-> ~~~
-> first = 1.0
-> second = "1"
-> third = "1.1"
-> ~~~
-> {: .python}
->
-> 1. `first + float(second)`
-> 2. `float(second) + float(third)`
-> 3. `first + int(third)`
-> 4. `first + int(float(third))`
-> 5. `int(first) + int(float(third))`
-> 6. `2.0 * second`
->
-> > ## Solution
-> >
-> > Answer: 1 and 4.
-> >
-> > 1. is correct
-> > 2. gives 2.1
-> > 3. gives an error because we cannot convert text to int directly
-> > 4. is correct
-> > 5. gives 2 (as an integer not as a float)
-> > 6. gives an error because `second` is a string.
 > {: .solution}
 {: .challenge}
