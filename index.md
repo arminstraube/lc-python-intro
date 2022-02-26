@@ -23,9 +23,12 @@ This lesson is an adapted from the Library Carpentry Lesson ["Python Intro for L
 
 > ## Demonstration and exercise scripts for dowwnload
 > In preparation for the lesson, please download and save the two following two scripts:
-> - The principles in this lesson are demonstrated with the ["demonstration script"](https://github.com/arminstraube/lc-python-intro/files/demonstration.py)
-> - The exercises are written in the ["exercises script"](https://github.com/arminstraube/lc-python-intro/files/exercises.py) 
-> Open the files with the Spyder editor (part of the Anaconda package)
+> 
+> - The principles in this lesson are demonstrated with the ["demonstration script"](https://arminstraube.github.io/lc-python-intro/files/demonstration.py)
+> - The exercises are written in the ["exercises script"](https://arminstraube.github.io/lc-python-intro/files/exercises.py) 
+> 
+> Open the files with the Spyder editor (part of the Anaconda package).
 > 
 {: .callout}
 
+https://arminstraube.github.io/lc-python-intro/files/exercises.py
