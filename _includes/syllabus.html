@@ -11,7 +11,7 @@
   {% for episode in site.episodes %}
     {% if episode.start %}{% assign multiday = true %}{% break %}{% endif %}
   {% endfor %}
-  {% assign current = 10:00 %}
+  {% assign current = 0 %} {% comment %} removed site.start_time to reset {% endcomment %}
 
   <table class="table table-striped">
   <tr>
