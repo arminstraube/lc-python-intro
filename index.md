@@ -21,8 +21,8 @@ This lesson is an adapted from the Library Carpentry Lesson ["Python Intro for L
 > 
 {: .prereq}
 
-> ## Demonstration and exercise scripts for dowwnload
-> In preparation for the lesson, please download and save the two following two scripts:
+> ## Preparation
+> In preparation for the lesson, please download and save the two following two files in a folder for this workshop:
 > 
 > - The principles in this lesson are demonstrated with the ["demonstration script"](https://arminstraube.github.io/lc-python-intro/files/demonstration.py)
 > - The exercises are written in the ["exercises script"](https://arminstraube.github.io/lc-python-intro/files/exercises.py) 
@@ -31,4 +31,3 @@ This lesson is an adapted from the Library Carpentry Lesson ["Python Intro for L
 > 
 {: .callout}
 
-https://arminstraube.github.io/lc-python-intro/files/exercises.py
