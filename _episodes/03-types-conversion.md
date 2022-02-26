@@ -1,7 +1,7 @@
 ---
 title: "Data Types and Type Conversion"
-teaching: 15
-exercises: 15
+teaching: 10
+exercises: 10
 questions:
 - "What kinds of data do programs store?"
 - "How can I convert one type to another?"
