@@ -1,6 +1,6 @@
 ---
 title: "Lists"
-teaching: 20
+teaching: 15
 exercises: 15
 questions:
 - "How can I store multiple values?"
