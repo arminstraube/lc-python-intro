@@ -4,6 +4,7 @@ teaching: 15
 exercises: 15
 questions:
 - "How can I store multiple values?"
+- "(David)"
 objectives:
 - "Explain why programs need collections of values."
 - "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
