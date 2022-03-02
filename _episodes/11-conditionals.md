@@ -4,6 +4,7 @@ teaching: 15
 exercises: 10
 questions:
 - "How can programs do different things for different data?"
+- "(David)"
 objectives:
 - "Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators)."
 - "Trace the execution of unnested conditionals and conditionals inside loops."
