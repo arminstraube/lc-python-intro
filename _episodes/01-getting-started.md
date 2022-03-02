@@ -5,6 +5,7 @@ exercises: 0
 questions:
 - "How do I use Spyder?"
 - "How can I run Python programs?"
+- "<b>Armin</b>"
 objectives:
 - "Learners can launch Spyder"
 - "Learners are able to use the IPython console to interact with Python"
