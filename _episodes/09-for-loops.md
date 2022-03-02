@@ -4,7 +4,7 @@ teaching: 15
 exercises: 15
 questions:
 - "How can I make a program do many things?"
-- "(Armin)"
+- "(**Armin**)"
 objectives:
 - "Explain what for loops are normally used for."
 - "Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration."
