@@ -6,6 +6,7 @@ questions:
 - "How can I extend the capabilities of Python?"
 - "How can I use software that other people have written?"
 - "How can I find out what that software does?"
+- "(Armin)"
 objectives:
 - "Explain what software libraries are and why programmers create and use them."
 - "Write programs that import and use libraries from Python's standard library."
