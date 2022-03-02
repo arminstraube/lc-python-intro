@@ -4,7 +4,7 @@ teaching: 15
 exercises: 15
 questions:
 - "How can I store data in programs?"
-- "<b>David</b>"
+- "(David)"
 objectives:
 - "Write programs that assign values to variables and perform calculations with those values."
 - "Correctly trace value changes in programs that use assignment."
