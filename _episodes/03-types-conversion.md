@@ -5,6 +5,7 @@ exercises: 10
 questions:
 - "What kinds of data do programs store?"
 - "How can I convert one type to another?"
+- "(Armin)"
 objectives:
 - "Explain key differences between integers and floating point numbers."
 - "Explain key differences between numbers and character strings."
