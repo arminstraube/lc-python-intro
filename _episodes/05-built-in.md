@@ -6,6 +6,7 @@ questions:
 - "How can I use built-in functions?"
 - "How can I find out what they do?"
 - "What kind of errors can occur in programs?"
+- "(David)"
 objectives:
 - "Explain the purpose of functions."
 - "Correctly call built-in Python functions."
