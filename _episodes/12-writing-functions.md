@@ -4,6 +4,7 @@ teaching: 10
 exercises: 5
 questions:
 - "How can I create my own functions?"
+- "(Armin)"
 objectives:
 - "Explain and identify the difference between function definition and function call."
 - "Write a function that takes a small, fixed number of arguments and produces a single result."
